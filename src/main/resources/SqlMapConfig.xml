@@ -13,8 +13,8 @@
 				<property name="driver" value="com.mysql.jdbc.Driver" />
 				<property name="url"
 					value="jdbc:mysql://localhost:3306/test?characterEncoding=utf-8&amp;useSSL=true" />
-				<property name="username" value="root" />
-				<property name="password" value="mysql" />
+				<property name="username" value="你的用户名" />
+				<property name="password" value="密码" />
 			</dataSource>
 		</environment>
 	</environments>
