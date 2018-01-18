@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.LianJiaNewHouseMapper">
+	<insert id="insertNewHouse" parameterType="java.util.List">
+		INSERT ignore INTO lianjia_newhouse (id,name,alias,average_price,address,developer,property_company,telphone,decoration_condition,
+		latest_opening_time,submit_time,water_and_electricity,property_costs,planned_households,property_term,volumetric_rate,
+		green_coverage,parking_condition,type,status,area,longitude,latitude,insert_time,update_time)
+		values 
+		<foreach collection ="list" item="item" index= "index" separator =",">
+			(
+			#{item.id},#{item.name},#{item.alias},#{item.averagePrice},#{item.address},#{item.developer},#{item.propertyCompany},
+			#{item.telphone},#{item.decoType},#{item.latestOpeningTime},#{item.submitTime},#{item.waterAndElectricity},
+			#{item.propertyCosts},#{item.plannedHouseholds},#{item.propertyTerm},#{item.volumetricRate},#{item.greenCoverage},
+			#{item.parkingCondition},#{item.type},#{item.status},#{item.area},#{item.longitude},#{item.latitude},
+			#{item.insertTime},#{item.updateTime}
+			)
+		</foreach>
+	</insert>
+</mapper>
