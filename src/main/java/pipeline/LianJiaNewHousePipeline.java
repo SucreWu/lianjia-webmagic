@@ -39,10 +39,6 @@ public class LianJiaNewHousePipeline implements Pipeline{
 		if(bean!=null) {
 			list.add(bean);
 		}
-		try {
-			logger.info(bean.toString());
-		} catch (java.lang.NullPointerException e) {
-		}
 	}
 	
 	
